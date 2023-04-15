@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val response = RetrofitInstance.api.pushNotification(notification)
                 if (response.isSuccessful) {
-                    Log.d(TAG, "NotificationResponse: ${Gson().toJson(response)}")
+                    Log.d(TAG, "NotificationResponse: ${response.toString()}")
                 } else {
                     Log.e(TAG, response.errorBody().toString())
                 }
