@@ -13,7 +13,7 @@ import retrofit2.http.POST
 interface NotificationApi {
     @Headers("Authorization: key=$SERVER_KEY","Content-Type: $CONTENT_TYPE")
     @POST("fcm/send")
-    fun pushNotification(
+   suspend fun pushNotification(
         @Body pushNotification: PushNotification
     ): Response<ResponseBody>
 
